@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  node-police-apps:
+    container_name: node-police-apps
+    environment:
+      - "TIMEOUT=10"
+    image: node-police-apps
+    restart: unless-stopped
+    volumes:
+      - "./config.json:/config.json"
